@@ -14,7 +14,7 @@ export default function Hero(): JSX.Element {
             Soda Perfected
           </p>
           <p  className="hero-body text-2xl font-normal text-sky-950">3-5g sugar, 9g fiber, 5 delicious flavors</p>
-          <Button className="hero-button mt-12">shop now</Button>
+          <button className="main-btn-style hero-button mt-12" aria-label="hero button to shop now">shop now</button>
         </div>
 
         <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
