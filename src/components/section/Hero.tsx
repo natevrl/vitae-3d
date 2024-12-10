@@ -12,14 +12,36 @@ export default function Hero(): JSX.Element {
   useGSAP(() => {
     const introTl = gsap.timeline();
 
-    introTl.from(".hero-header-word", {
-      scale: 3,
-      opacity: 0,
-    })
+    introTl
+      .set(".hero", { opacity: 1 })
+      .from(".hero-header-word", {
+        scale: 3,
+        opacity: 0,
+        ease: "power4.in",
+        delay: 0.2,
+        stagger: 1,
+      })
+      .from(
+        ".hero-subheading",
+        {
+          opacity: 0,
+          y: 30,
+        },
+        "+=0.5",
+      )
+      .from(".hero-body", {
+        opacity: 0,
+        y: 10,
+      })
+      .from(".hero-button", {
+        opacity: 0,
+        y: 10,
+        duration: 0.6,
+      });
   });
 
   return (
-    <Bounded className="hero">
+    <Bounded className="hero opacity-0">
       <div className="grid">
         <div className="grid h-screen place-items-center">
           <h1 className="hero-header text-center text-7xl font-black uppercase leading-[.8] text-orange-500 md:text-[9rem] lg:text-[13rem]">
