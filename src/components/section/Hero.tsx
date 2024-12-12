@@ -7,39 +7,42 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { TextSplitter } from "../ui/TextSplitter";
 import { Bounded } from "../ui/Bounded";
+import { View } from "@react-three/drei";
+import MainScene from "../ui/3d/MainScene";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Hero(): JSX.Element {
-  useGSAP(() => {
-    const introTl = gsap.timeline();
+  useGSAP(
+    () => {
+      const introTl = gsap.timeline();
 
-    introTl
-      .set(".hero", { opacity: 1 })
-      .from(".hero-header-word", {
-        scale: 3,
-        opacity: 0,
-        ease: "power4.in",
-        delay: 0.3,
-        stagger: .6,
-      })
-      .from(
-        ".hero-subheading",
-        {
+      introTl
+        .set(".hero", { opacity: 1 })
+        .from(".hero-header-word", {
+          scale: 3,
           opacity: 0,
-          y: 30,
-        },
-        "+=0.3",
-      )
-      .from(".hero-body", {
-        opacity: 0,
-        y: 10,
-      })
-      .from(".hero-button", {
-        opacity: 0,
-        y: 10,
-        duration: 0.6,
-      });
+          ease: "power4.in",
+          delay: 0.3,
+          stagger: 0.6,
+        })
+        .from(
+          ".hero-subheading",
+          {
+            opacity: 0,
+            y: 30,
+          },
+          "+=0.3",
+        )
+        .from(".hero-body", {
+          opacity: 0,
+          y: 10,
+        })
+        .from(".hero-button", {
+          opacity: 0,
+          y: 10,
+          duration: 0.6,
+        });
 
       const scrollTl = gsap.timeline({
         scrollTrigger: {
@@ -82,6 +85,11 @@ export default function Hero(): JSX.Element {
 
   return (
     <Bounded className="hero opacity-0">
+      {/* Main vue de mon Canva 3D */}
+      <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
+        <MainScene />
+      </View>
+
       <div className="grid">
         <div className="grid h-screen place-items-center">
           <h1 className="hero-header text-center text-7xl font-black uppercase leading-[.8] text-orange-500 md:text-[9rem] lg:text-[13rem]">
