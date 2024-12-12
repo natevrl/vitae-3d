@@ -1,12 +1,14 @@
 "use client";
 
-import { Bounded } from "../ui/Bounded";
 import Image from "next/image";
-import { TextSplitter } from "../ui/TextSplitter";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(useGSAP);
+import { TextSplitter } from "../ui/TextSplitter";
+import { Bounded } from "../ui/Bounded";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Hero(): JSX.Element {
   useGSAP(() => {
@@ -18,8 +20,8 @@ export default function Hero(): JSX.Element {
         scale: 3,
         opacity: 0,
         ease: "power4.in",
-        delay: 0.2,
-        stagger: 1,
+        delay: 0.3,
+        stagger: .6,
       })
       .from(
         ".hero-subheading",
@@ -27,7 +29,7 @@ export default function Hero(): JSX.Element {
           opacity: 0,
           y: 30,
         },
-        "+=0.5",
+        "+=0.3",
       )
       .from(".hero-body", {
         opacity: 0,
@@ -38,7 +40,45 @@ export default function Hero(): JSX.Element {
         y: 10,
         duration: 0.6,
       });
-  });
+
+      const scrollTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1.5,
+          markers: true,
+        },
+      });
+
+      scrollTl
+        .fromTo(
+          "body",
+          {
+            backgroundColor: "#FDE047",
+          },
+          {
+            backgroundColor: "#D9F99D",
+            overwrite: "auto",
+          },
+          1,
+        )
+        .from(".text-side-heading .split-char", {
+          scale: 1.3,
+          y: 40,
+          rotate: -25,
+          opacity: 0,
+          stagger: 0.1,
+          ease: "back.out(3)",
+          duration: 0.5,
+        })
+        .from(".text-side-body", {
+          y: 20,
+          opacity: 0,
+        });
+    },
+    // { dependencies: [ready, isDesktop] },
+  );
 
   return (
     <Bounded className="hero opacity-0">
