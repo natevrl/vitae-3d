@@ -1,5 +1,4 @@
-import { Header } from "@/src/components/layout/Header";
-import Hero from "@/src/components/section/Hero";
+import Hero from "@/components/section/Hero";
 
 export default function Home(): JSX.Element {
   return (

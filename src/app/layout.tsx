@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Header } from "@/src/components/layout/Header";
+import { Header } from "@/components/layout/Header";
 import ViewCanvas from "../components/ui/3d/ViewCanvas";
 
 const alpino = localFont({
