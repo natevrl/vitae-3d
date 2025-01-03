@@ -9,12 +9,20 @@ import { TextSplitter } from "../ui/TextSplitter";
 import { Bounded } from "../ui/Bounded";
 import { View } from "@react-three/drei";
 import MainScene from "../ui/3d/MainScene";
+import { Bubbles } from "../ui/3d/Bubbles";
+import { useStore } from "@/hooks/useStore";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Hero(): JSX.Element {
+  const isDesktop = useMediaQuery("(min-width: 768px)", true);
+  const ready = useStore((state) => state.ready);
+
   useGSAP(
     () => {
+      if (!ready && isDesktop) return;
+
       const introTl = gsap.timeline();
 
       introTl
@@ -50,7 +58,6 @@ export default function Hero(): JSX.Element {
           start: "top top",
           end: "bottom bottom",
           scrub: 1.5,
-          markers: true,
         },
       });
 
@@ -80,15 +87,18 @@ export default function Hero(): JSX.Element {
           opacity: 0,
         });
     },
-    // { dependencies: [ready, isDesktop] },
+    { dependencies: [ready, isDesktop] },
   );
 
   return (
     <Bounded className="hero opacity-0">
       {/* Main vue de mon Canva 3D */}
-      <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
-        <MainScene />
-      </View>
+      {isDesktop && (
+        <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
+          <MainScene />
+          <Bubbles />
+        </View>
+      )}
 
       <div className="grid">
         <div className="grid h-screen place-items-center">
