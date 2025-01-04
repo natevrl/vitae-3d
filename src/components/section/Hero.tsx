@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { TextSplitter } from "../ui/TextSplitter";
-import { Bounded } from "../ui/Bounded";
+import { Section } from "../ui/Section";
 import { View } from "@react-three/drei";
 import MainScene from "../ui/3d/MainScene";
 import { Bubbles } from "../ui/3d/Bubbles";
@@ -91,7 +91,7 @@ export default function Hero(): JSX.Element {
   );
 
   return (
-    <Bounded className="hero opacity-0">
+    <Section className="hero opacity-0">
       {/* Main vue de mon Canva 3D */}
       {isDesktop && (
         <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
@@ -143,6 +143,6 @@ export default function Hero(): JSX.Element {
           </div>
         </div>
       </div>
-    </Bounded>
+    </Section>
   );
 }

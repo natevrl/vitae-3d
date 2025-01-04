@@ -1,17 +1,17 @@
 import clsx from "clsx";
 
-type BoundedProps = {
+type SectionProps = {
   as?: React.ElementType;
   className?: string;
   children: React.ReactNode;
 };
 
-export const Bounded = ({
+export const Section = ({
   as: Comp = "section",
   className,
   children,
   ...restProps
-}: BoundedProps) => {
+}: SectionProps) => {
   return (
     <Comp
       className={clsx("px-4 first:pt-10 md:px-6", className)}
