@@ -5,11 +5,13 @@ import SkyDiveScene from "../ui/3d/SkyDiveScene";
 import { View } from "@react-three/drei";
 
 function SkyDive(): JSX.Element {
+  const text = "dive into better health";
+
   return (
     <Section className="skydive h-screen">
-      <h2 className="sr-only">dive into better health</h2>
+      <h2 className="sr-only">{text}</h2>
       <View className="h-screen w-screen">
-        <SkyDiveScene />
+        <SkyDiveScene text={text}/>
       </View>
     </Section>
   );
