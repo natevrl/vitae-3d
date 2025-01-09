@@ -1,3 +1,4 @@
+import Carousel from "@/components/section/Carousel";
 import Hero from "@/components/section/Hero";
 import SkyDive from "@/components/section/SkyDive";
 
@@ -6,6 +7,7 @@ export default function Home(): JSX.Element {
     <>
       <Hero />
       <SkyDive />
+      <Carousel />
     </>
   );
 }
