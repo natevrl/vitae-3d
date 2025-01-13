@@ -102,25 +102,27 @@ export default function Hero(): JSX.Element {
 
       <div className="grid">
         <div className="grid h-screen place-items-center">
-          <h1 className="hero-header text-center text-7xl font-black uppercase leading-[.8] text-orange-500 md:text-[9rem] lg:text-[13rem]">
-            <TextSplitter
-              text="Live gutsy"
-              wordDisplayStyle="block"
-              className="hero-header-word"
-            />
-          </h1>
-          <p className="hero-subheading mt-12 text-5xl font-semibold text-sky-950 lg:text-6xl">
-            Soda Perfected
-          </p>
-          <p className="hero-body text-2xl font-normal text-sky-950">
-            3-5g sugar, 9g fiber, 5 delicious flavors
-          </p>
-          <button
-            className="main-btn-style hero-button mt-12"
-            aria-label="hero button to shop now"
-          >
-            shop now
-          </button>
+          <div className="grid auto-rows-min place-items-center text-center">
+            <h1 className="hero-header text-center text-7xl font-black uppercase leading-[.8] text-orange-500 md:text-[9rem] lg:text-[13rem]">
+              <TextSplitter
+                text="Live gutsy"
+                wordDisplayStyle="block"
+                className="hero-header-word"
+              />
+            </h1>
+            <p className="hero-subheading mt-12 text-5xl font-semibold text-sky-950 lg:text-6xl">
+              Soda Perfected
+            </p>
+            <p className="hero-body text-2xl font-normal text-sky-950">
+              3-5g sugar, 9g fiber, 5 delicious flavors
+            </p>
+            <button
+              className="main-btn-style hero-button mt-12"
+              aria-label="hero button to shop now"
+            >
+              shop now
+            </button>
+          </div>
         </div>
 
         <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">

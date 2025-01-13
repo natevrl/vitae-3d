@@ -8,8 +8,8 @@ import gsap from "gsap";
 
 import { SodaCanProps } from "../ui/3d/SodaCan";
 import FloatingCan from "../ui/3d/FloatingCan";
-// import { ArrowIcon } from "./ArrowIcon";
-// import { WavyCircles } from "./WavyCircles";
+import { ArrowIcon } from "../ui/ArrowIcon";
+import { WavyCircles } from "../ui/WavyCircles";
 
 const SPINS_ON_CHANGE = 8;
 const FLAVORS: {
@@ -37,7 +37,6 @@ const Carousel = (): JSX.Element => {
     if (!sodaCanRef.current) return;
 
     const nextIndex = (index + FLAVORS.length) % FLAVORS.length;
-    console.log(nextIndex);
 
     const tl = gsap.timeline();
 
@@ -74,7 +73,7 @@ const Carousel = (): JSX.Element => {
     >
       <div className="background pointer-events-none absolute inset-0 bg-[#710523] opacity-50" />
 
-      {/* <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" /> */}
+      <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" />
 
       <h2 className="relative text-center text-5xl font-bold">
         Choose Your Flavor
@@ -142,7 +141,7 @@ function ArrowButton({
       onClick={onClick}
       className="size-12 rounded-full border-2 border-white bg-white/10 p-3 opacity-85 ring-white focus:outline-none focus-visible:opacity-100 focus-visible:ring-4 md:size-16 lg:size-20"
     >
-      {/* <ArrowIcon className={clsx(direction === "right" && "-scale-x-100")} /> */}
+      <ArrowIcon className={clsx(direction === "right" && "-scale-x-100")} />
       <span className="sr-only">{label}</span>
     </button>
   );
