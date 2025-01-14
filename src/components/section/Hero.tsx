@@ -127,7 +127,7 @@ export default function Hero(): JSX.Element {
 
         <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
           <Image
-            src="/assets/all-cans-bunched.png"
+            src="/images/all-cans-bunched.png"
             alt="all cans hero img"
             width={400}
             height={400}

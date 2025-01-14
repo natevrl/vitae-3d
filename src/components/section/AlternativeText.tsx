@@ -1,6 +1,6 @@
 "use client";
 
-import { Bounded } from "@/components/ui/Bounded";
+import { Section } from "@/components/ui/Section";
 import { View } from "@react-three/drei";
 import AltTextScene from "@/components/ui/3d/AltTextScene";
 import clsx from "clsx";
@@ -19,14 +19,10 @@ const AlternatingText = (): JSX.Element => {
       heading: "Naturally Refreshing",
       body: "Made with only the best natural ingredients, our soda is free from artificial sweeteners and flavors. It’s a crisp, clean taste that feels as good as it tastes, giving you a boost of real, natural refreshment.",
     },
-    {
-      heading: "Heading 4",
-      body: "awdwa",
-    },
   ];
 
   return (
-    <Bounded className="alternating-text-container relative bg-yellow-300 text-sky-950">
+    <Section className="alternating-text-container relative bg-yellow-300 text-sky-950">
       <div>
         <div className="relative z-[100] grid">
           <View className="alternating-text-view absolute left-0 top-0 h-screen w-full">
@@ -41,7 +37,7 @@ const AlternatingText = (): JSX.Element => {
                 className={clsx(
                   index % 2 === 0 ? "col-start-1" : "md:col-start-2",
 
-                  "rounded-lg p-4 backdrop-blur-lg max-md:bg-white/30",
+                  "rounded-lg p-4 backdrop-blur-sm max-md:bg-white/30",
                 )}
               >
                 <h2 className="text-balance text-6xl font-bold">
@@ -53,7 +49,7 @@ const AlternatingText = (): JSX.Element => {
           ))}
         </div>
       </div>
-    </Bounded>
+    </Section>
   );
 };
 
