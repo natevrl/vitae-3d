@@ -35,7 +35,7 @@ Follow these steps to get the project up and running on your local machine.
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/vitae-3d.git
+   git clone https://github.com/natevrl/vitae-3d.git
    cd vitae-3d
    ```
 
