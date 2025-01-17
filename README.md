@@ -1,6 +1,6 @@
 <h1 align="center">🍹 Vitae: Soda for Gutsy People 🍹</h1>
 
-![Readme Image](/public/readme-image.png)
+![Readme Image](/public/readme-image.webp)
 
 **Vitae** is a moedern 3d web application designed to showcase and promote a range of healthy and delicious sodas. This platform allows users to explore different soda flavors, learn about their benefits, and enjoy a visually engaging experience.
 
