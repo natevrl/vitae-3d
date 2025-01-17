@@ -2,7 +2,7 @@
 
 ![Readme Image](/public/readme-image.webp)
 
-**Vitae** is a moedern 3d web application designed to showcase and promote a range of healthy and delicious sodas. This platform allows users to explore different soda flavors, learn about their benefits, and enjoy a visually engaging experience.
+**Vitae** is a modern 3d web application designed to showcase and promote a range of healthy and delicious sodas. This platform allows users to explore different soda flavors, learn about their benefits, and enjoy a visually engaging experience.
 
 ## ⚙️ Tech Stack
 - Next.js / React
