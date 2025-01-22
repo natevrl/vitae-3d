@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import ViewCanvas from "../components/ui/3d/ViewCanvas";
@@ -31,6 +33,7 @@ export default function RootLayout({
           <ViewCanvas />
         </main>
         <Footer />
+      <SpeedInsights />
       </body>
     </html>
   );
