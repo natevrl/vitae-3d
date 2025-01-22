@@ -15,14 +15,14 @@
 
 ## 🔋 Features
 
-- - 👉 **Three.js & GSAP for 3d dynamic animations**: Advanced skills in creating modern web animations and interactive 3D scenes.
+- 👉 **Three.js & GSAP for 3d dynamic animations**: Advanced skills in creating modern web animations and interactive 3D scenes.
 - 👉 **Responsive Design**: Ensures an optimal viewing experience across all devices, from desktops to mobile phones.
 - 👉 **Layouts and Route Handlers**: Structured layouts and custom route handlers for better navigation and API integration.
 - 👉 **3D Animations**: Engaging animations using GSAP and Three.js for a dynamic user experience.
 - 👉 **Optimistic Updates**: Implement optimistic UI updates for a better user experience.
+- 👉 **Flavor Carousel**: Interactive carousel to explore different soda flavors.
 - 👉 **Extensive Flavor Information**: Access detailed information about each soda flavor, including ingredients and health benefits.
 - 👉 **Client & Server Components**: Seamless integration of client and server components for a smooth user experience.
-- 👉 **Flavor Carousel**: Interactive carousel to explore different soda flavors.
 - 👉 **Styling with Tailwind CSS**: Modern and responsive design using Tailwind CSS.
 - 👉 **Custom Fonts**: Integration of custom fonts for a unique look and feel.
 
