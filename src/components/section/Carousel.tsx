@@ -28,7 +28,6 @@ const FLAVORS: {
   { flavor: "watermelon", color: "#4B7002", name: "Watermelon Crush" },
 ];
 
-
 const Carousel = (): JSX.Element => {
   const [currentFlavorIndex, setCurrentFlavorIndex] = useState(0);
   const sodaCanRef = useRef<Group>(null);
@@ -69,6 +68,7 @@ const Carousel = (): JSX.Element => {
 
   return (
     <section
+      id="carousel"
       className="carousel relative grid h-screen grid-rows-[auto,4fr,auto] justify-center overflow-hidden bg-white py-12 text-white"
     >
       <div className="background pointer-events-none absolute inset-0 bg-[#710523] opacity-50" />
@@ -95,7 +95,7 @@ const Carousel = (): JSX.Element => {
               rotationIntensity={1}
               flavor={FLAVORS[currentFlavorIndex].flavor}
             />
-            </group>
+          </group>
 
           <Environment
             files="/images/hdrs/lobby.hdr"
@@ -123,7 +123,6 @@ const Carousel = (): JSX.Element => {
     </section>
   );
 };
-
 
 type ArrowButtonProps = {
   direction?: "right" | "left";

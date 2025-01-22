@@ -8,7 +8,7 @@ function SkyDive(): JSX.Element {
   const text = "dive into better health";
 
   return (
-    <Section className="skydive h-screen">
+    <Section className="skydive h-screen" >
       <h2 className="sr-only">{text}</h2>
       <View className="h-screen w-screen">
         <SkyDiveScene text={text}/>

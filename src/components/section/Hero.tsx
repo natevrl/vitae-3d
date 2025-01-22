@@ -120,7 +120,7 @@ export default function Hero(): JSX.Element {
               className="main-btn-style hero-button mt-12"
               aria-label="hero button to shop now"
             >
-              shop now
+              <a href="#carousel">shop now</a>
             </button>
           </div>
         </div>

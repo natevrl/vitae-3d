@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
+
 @layer base {
   body {
     @apply overflow-x-hidden bg-yellow-300;
